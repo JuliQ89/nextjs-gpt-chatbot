@@ -1,0 +1,72 @@
+/* ##### FONT FAMILYS ##### */
+@font-face {
+  font-family: "poppins-thin";
+  src: url(../fonts/poppins/Poppins-Thin.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppins-regular";
+  src: url(../fonts/poppins/Poppins-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-medium";
+  src: url(../fonts/poppins/Poppins-Medium.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppins-bold";
+  src: url(../fonts/poppins/Poppins-Bold.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppins-black";
+  src: url(../fonts/poppins/Poppins-Black.ttf);
+  font-style: normal;
+}
+
+:root {
+  /* ##### DEFAULT COLORS ##### */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* ##### MAIN COLORS ##### */
+  --dark-grey: #30343f;
+  --light-grey: #fafaff;
+  --lightest-blue: #e4d9ff;
+  --primary-blue: #3e8dd8;
+  --dark-blue: #273469;
+  --darkest-blue: #1e2749;
+
+  /* ##### FONT FAMILY ##### */
+  --poppins-thin: "poppins-thin";
+  --poppins-regular: "poppins-regular";
+  --poppins-medium: "poppins-medium";
+  --poppins-bold: "poppins-bold";
+  --poppins-black: "poppins-black";
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--poppins-regular);
+  background-color: var(--light-grey);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
