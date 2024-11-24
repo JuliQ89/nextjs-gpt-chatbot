@@ -41,9 +41,10 @@ def delete_chat(request, id:uuid.UUID):
 # ##### MESSAGE #####
 message_router = Router(tags=['Message'])
 
-@message_router.get('/', response=List[MessageSchemaOut])
-def get_messages(request):
-    return Message.objects.all()
+@message_router.get('/{chat_id}/', response=List[MessageSchemaOut])
+def get_messages(request, chat_id: uuid.UUID):
+    chat = get_object_or_404(Chat, id=chat_id)
+    return chat.messages.all()
 
 @message_router.get('/{id}/', response=MessageSchemaOut)
 def get_message(request, id: int):
@@ -52,7 +53,8 @@ def get_message(request, id: int):
     
 @message_router.post('/', response=MessageSchemaOut)
 def post_message(request, payload:MessageSchemaIn):
-    message = Message.objects.create(**payload.dict())
+    chat = get_object_or_404(Chat, id=payload.chat)
+    message = Message.objects.create(chat=chat, text=payload.text, sender=payload.sender)
     return message
 
     

@@ -37,9 +37,10 @@
 
   /* ##### MAIN COLORS ##### */
   --dark-grey: #30343f;
-  --light-grey: #fafaff;
+  --lightest-grey: #fafaff;
+  --light-grey: #e9e9e9;
   --lightest-blue: #e4d9ff;
-  --primary-blue: #3e8dd8;
+  --primary-blue: #488dfc;
   --dark-blue: #273469;
   --darkest-blue: #1e2749;
 
@@ -49,6 +50,10 @@
   --poppins-medium: "poppins-medium";
   --poppins-bold: "poppins-bold";
   --poppins-black: "poppins-black";
+
+  /* ##### DEFAULT ##### */
+  --sidebar-width: 300px;
+  --header-height: 75px;
 }
 
 html,
@@ -59,7 +64,7 @@ body {
 
 body {
   font-family: var(--poppins-regular);
-  background-color: var(--light-grey);
+  background-color: var(--lightest-grey);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,0 +1,179 @@
+/* ##### SIDEBAR ##### */
+.app-sidebar {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app-sidebar__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.app-sidebar__header > a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.app-sidebar__header > a > img {
+  --logo-size: 42px;
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+.app-sidebar__header > a > h4 {
+  font-family: var(--poppins-medium);
+  font-size: 19px;
+  color: var(--primary-blue);
+}
+
+.app-sidebar__header > button {
+  background-color: var(--light-grey);
+  outline: none;
+  border: none;
+  color: var(--dark-grey);
+  font-family: var(--poppins-medium);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: fit-content;
+  transition: all 0.25s ease;
+}
+
+.app-sidebar__header > button > svg {
+  font-size: 18px;
+}
+
+.app-sidebar__header > button:hover {
+  color: var(--dark-blue);
+  background-color: var(--lightest-blue);
+}
+
+.app-sidebar__main {
+  display: flex;
+}
+
+.app-sidebar__chats-list {
+  display: flex;
+  flex-direction: column;
+  list-style-position: inside;
+  list-style-type: none;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.app-sidebar__chats-list > li > a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--dark-grey);
+  font-size: 15px;
+  background-color: transparent;
+  transition: all 0.25s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+.app-sidebar__chats-list > li > a:hover,
+.app-sidebar__chats-list > li > a.active {
+  background-color: var(--light-grey);
+}
+
+.app-sidebar__chats-list > li > a > svg {
+  min-width: 15px;
+}
+
+.app-sidebar__chats-list > li > a > input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  font-family: var(--poppins-regular);
+  color: var(--dark-grey);
+  flex-grow: 1;
+}
+
+.app-sidebar__chats-list > li > a > abbr {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.app-sidebar__chats-list > li > a > abbr > svg {
+  color: #5c616d;
+  transition: all 0.25s ease;
+}
+
+.app-sidebar__chats-list > li > a > abbr:hover > svg {
+  color: var(--dark-grey);
+}
+
+/* CONTEXT MENU */
+.app-sidebar__chat-modal {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.15rem;
+  list-style-type: none;
+  cursor: auto;
+}
+
+.app-sidebar__chat-modal.active {
+  display: flex;
+}
+
+.app-sidebar__chat-modal > li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--dark-grey);
+  font-size: 15px;
+  background-color: transparent;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.app-sidebar__chat-modal > li:hover {
+  background-color: var(--light-grey);
+}
+
+/* ##### HEADER ##### */
+.app-header {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+}

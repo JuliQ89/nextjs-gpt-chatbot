@@ -16,6 +16,8 @@ class ChatSchemaOut(Schema):
 
 class MessageSchemaIn(Schema):
     text: str
+    sender: str
+    chat: uuid.UUID
 
 class MessageSchemaOut(Schema):
     chat: ChatSchemaOut
@@ -23,3 +25,4 @@ class MessageSchemaOut(Schema):
     text: str
     sender: str
     created: datetime
+    id: int
